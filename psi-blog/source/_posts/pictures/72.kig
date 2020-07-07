@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE KigDocument>
+<KigDocument Version="1.0" CompatibilityVersion="0.7.0" grid="0" axes="0">
+ <CoordinateSystem>Euclidean</CoordinateSystem>
+ <Hierarchy>
+  <Data id="1" type="double">0</Data>
+  <Data id="2" type="double">2.23263</Data>
+  <Data id="3" type="double">1</Data>
+  <Data id="4" type="double">0</Data>
+  <Data id="5" type="double">-1</Data>
+  <Data id="6" type="double">0</Data>
+  <Data id="7" type="double">-0.274575</Data>
+  <Data id="8" type="double">1</Data>
+  <Data id="9" type="double">0</Data>
+  <Data id="10" type="double">0</Data>
+  <Object id="11" type="FixedPoint">
+   <Parent id="9"/>
+   <Parent id="8"/>
+  </Object>
+  <Object id="12" type="FixedPoint">
+   <Parent id="5"/>
+   <Parent id="6"/>
+  </Object>
+  <Object id="13" type="FixedPoint">
+   <Parent id="3"/>
+   <Parent id="4"/>
+  </Object>
+  <Object id="14" type="SegmentAB">
+   <Parent id="12"/>
+   <Parent id="13"/>
+  </Object>
+  <Object id="15" type="FixedPoint">
+   <Parent id="1"/>
+   <Parent id="10"/>
+  </Object>
+  <Object id="16" type="LineAB">
+   <Parent id="11"/>
+   <Parent id="15"/>
+  </Object>
+  <Object id="17" type="FixedPoint">
+   <Parent id="7"/>
+   <Parent id="2"/>
+  </Object>
+  <Object id="18" type="LineAB">
+   <Parent id="17"/>
+   <Parent id="12"/>
+  </Object>
+  <Object id="19" type="LineLineIntersection">
+   <Parent id="18"/>
+   <Parent id="16"/>
+  </Object>
+  <Object id="20" type="SegmentAB">
+   <Parent id="19"/>
+   <Parent id="12"/>
+  </Object>
+  <Object id="21" type="SegmentAB">
+   <Parent id="19"/>
+   <Parent id="13"/>
+  </Object>
+  <Object id="22" type="Angle">
+   <Parent id="13"/>
+   <Parent id="12"/>
+   <Parent id="17"/>
+  </Object>
+  <Property id="23" which="angle-bisector">
+   <Parent id="22"/>
+  </Property>
+  <Object id="24" type="LineLineIntersection">
+   <Parent id="23"/>
+   <Parent id="21"/>
+  </Object>
+  <Object id="25" type="SegmentAB">
+   <Parent id="24"/>
+   <Parent id="12"/>
+  </Object>
+ </Hierarchy>
+ <View>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="12" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="15" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="13" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="19" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="23" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="24" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="11" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="22" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="21" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="25" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="18" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="17" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="14" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="true" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="20" point-style="Round" color="#000000"/>
+  <Draw namecalcer="none" width="3" style="SolidLine" shown="false" font="Sans Serif,9,-1,5,50,0,0,0,0,0" object="16" point-style="Round" color="#000000"/>
+ </View>
+</KigDocument>
