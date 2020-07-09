@@ -14,6 +14,8 @@ tags: Math Algebra
 
 <!-- vim-markdown-toc -->
 
+<!--more-->
+
 ## Sylow Theorems
 
 **Definition.** 设有限群 $G$,设 $p^n$ 为 $\mid G \mid$ 的因子中最大的 $p$ 的幂次.$G$ 的子群 $H$ 被称为 $p$-Sylow 子群,如果 $\mid H\mid = p^n$.
