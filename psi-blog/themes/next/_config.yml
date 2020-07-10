@@ -138,8 +138,8 @@ menu_settings:
 
 sidebar:
   # Sidebar Position.
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -161,9 +161,9 @@ sidebar:
 # Sidebar Avatar
 avatar:
   # Replace the default image and set the url here.
-  url: #/images/avatar.gif
+  url: /2019/07/03/Hello-World/psi.png
   # If true, the avatar will be dispalyed in circle.
-  rounded: false
+  rounded: true
   # If true, the avatar will be rotated with the cursor.
   rotated: false
 
@@ -345,7 +345,7 @@ mobile_layout_economy: false
 android_chrome_color: "#222"
 
 # Custom Logo (Do not support scheme Mist)
-custom_logo: #/uploads/custom-logo.jpg
+custom_logo: /2019/07/03/Hello-World/psi.png
 
 codeblock:
   # Code Highlight theme
