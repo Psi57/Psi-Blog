@@ -8,6 +8,7 @@ tags: test
 * [Hello World!](#hello-world)
     * [Markdown](#markdown)
     * [code](#code)
+    * [CD](#cd)
 
 <!-- vim-markdown-toc -->
 
@@ -36,3 +37,15 @@ int main ()
     return 0;
 }
 ```
+
+## CD
+$\require{AMScd}$
+
+$$
+\begin{CD}
+T(A) @>\varphi>> U(A) \\
+@VVT(f)V        @VVU(f)V \\
+T(A') @>\varphi >> U(A')
+\end{CD}
+$$
+

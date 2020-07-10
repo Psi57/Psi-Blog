@@ -143,7 +143,7 @@ $$
 
 我们得到
 
-<img src="https://raw.githubusercontent.com/Wuxiangdong/Wuxiangdong.github.io/master/_posts/pictures/Galois-Theory-2.svg?sanitize=true" width="90%" height="90%">
+<img src="Galois-Theory-2.svg" width="90%" height="90%">
 
 ## 代数基本定理
 作为伽罗瓦理论基本定理的一个应用, 我们证明代数基本定理. 代数基本定理指出 $\mathbb{C}[x]$ 中任意多项式在 $\mathbb{C}$ 中均有根. 即

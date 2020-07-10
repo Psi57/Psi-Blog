@@ -432,7 +432,7 @@ $$
 
 **几何法**
 
-<img src="https://raw.githubusercontent.com/Wuxiangdong/Wuxiangdong.github.io/master/_posts/pictures/72.svg?sanitize=true" width="50%" height="50%" align="left">
+<img src="72.svg" width="50%" height="50%" align="left">
 
 如图, $\mathrm{\angle CAB = \angle ABC = \angle ADB} = 72^\circ$, $\mathrm{CA} = 1$. 则 $\mathrm{AB} = \mathrm{AD} = 2\cos 72^\circ$. 又 $\angle{\mathrm{CAD}} = \angle{\mathrm{ACD}} = 36^\circ$, 所以 $\mathrm{CD} = 2\cos 72^\circ$. $\triangle \mathrm{ABD} \sim \triangle\mathrm{CAB}$, 从而 $\mathrm{BD} = 4\cos^2 72^{\circ}$, $\mathrm{CD} = 1-4\cos^2 72^\circ$. 于是
 
