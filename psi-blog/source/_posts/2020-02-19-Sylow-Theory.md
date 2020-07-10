@@ -8,7 +8,7 @@ tags: Math Algebra
 <!-- vim-markdown-toc GFM -->
 
 * [Sylow Theorems](#sylow-theorems)
-* [Fusion in the normalizer of a $\bm p$-Sylow subgroup](#fusion-in-the-normalizer-of-a-bm-p-sylow-subgroup)
+* [Fusion in the normalizer of a $\boldsymbol{p}$-Sylow subgroup](#fusion-in-the-normalizer-of-a-boldsymbolp-sylow-subgroup)
 * [Local conjugacy and Alperin's Theorem](#local-conjugacy-and-alperins-theorem)
 * [Exercises](#exercises)
 
@@ -35,7 +35,7 @@ ii) (1) $G$ 的每个 $p$-子群都被含于某一 $p$-Sylow 子群.
 
 _Proof._ 记 $K = N_G(H)$, 则 $H$ 正规于 $K$. 由 Frattini 论断,有 $K = HN_K(S)$. 但是 $N_K(S) \subset N_G(S) \subset H$, 有 $K = H$.
 
-## Fusion in the normalizer of a $\bm p$-Sylow subgroup
+## Fusion in the normalizer of a $\boldsymbol{p}$-Sylow subgroup
 
 若 $S \subset K$, 都是 $G$ 的子群. $H$ 的两个元素被称为在 $K$ 中融合,如果它们是 $K$-共轭的.
 
