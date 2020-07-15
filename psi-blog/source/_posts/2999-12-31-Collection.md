@@ -316,3 +316,8 @@ $$\begin{aligned}
 
 (来自徐明曜著《有限群》).
 
+2020-7-16
+
+在加性范畴中有限直和和直积一样.
+https://math.stackexchange.com/questions/25213/in-an-additive-category-why-is-finite-products-the-same-as-finite-coproducts
+
