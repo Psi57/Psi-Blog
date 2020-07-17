@@ -98,7 +98,7 @@ $$
     \tau(\chi) = \sum_{a \in \mathbb{Z} /r\mathbb{Z}} \chi(a)\zeta_r^a
 $$
 
-为 $\chi$ 的 Gauss 和. 其求和号可以换为 $\sum_{a=1}^r,\sum_{a=1}^{r-1}$ 或者 $\sum_{a \in (\mathbb{Z} /r\mathbb{Z})^\times}$. 我们有
+为 $\chi$ 的 Gauss 和. 其求和号可以换为 $\sum_{a=1}^r,\sum_{a=1}^{r-1}$ 或者 $\sum_{a \in (\mathbb{Z} /r\mathbb{Z})^\times}$. 设 $\chi$ 是本原的, 我们有
 
 $$
     \begin{aligned}
