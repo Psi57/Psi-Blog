@@ -8,6 +8,8 @@ $\newcommand{\bbZ}{\mathbb{Z}}$
 
 看一点写(~~抄~~)一点
 
+[1] 上的命题保持其编号. 这篇文章单独出现的命题以小括号编号.
+
 
 <!-- vim-markdown-toc GFM -->
 
@@ -15,7 +17,9 @@ $\newcommand{\bbZ}{\mathbb{Z}}$
     * [Structure of $(\mathbb{Z}/m\mathbb{Z})^{\times}$.](#structure-of-mathbbzmmathbbztimes)
     * [The quadratic reciprocity law](#the-quadratic-reciprocity-law)
         * [The quadratic residue symbol](#the-quadratic-residue-symbol)
+        * [Characters of Abelian groups](#characters-of-abelian-groups)
         * [Dirichlet Character](#dirichlet-character)
+* [参考资料](#参考资料)
 
 <!-- vim-markdown-toc -->
 
@@ -77,9 +81,28 @@ $$
     \left(\dfrac{-1}{p}\right) = (-1)^{\frac{p-1}{2}}.
 $$
 
+#### Characters of Abelian groups
+
+设 $G$ 是有限 Abel 群, 则 $G$ 的所有不可约复表示都是一维的.
+
+我们有 $\mathrm{Hom}(G,\mathbb{C}^\times) \simeq G$. 这是因为 $G$ 可写成循环群的直和 $G = \bigoplus_{i=1}^{s} G_i$, 有 $\mathrm{Hom}(G,\mathbb{C}^\times) \simeq \bigoplus_{i=1}^{s}\mathrm{Hom}(G_i,\mathbb{C}^\times)$. 易见对循环群 $G_i$ 有 $\mathrm{Hom}(G_i,\mathbb{C}^\times) \simeq G_i$. 于是 $\bigoplus_{i=1}^{s}\mathrm{Hom}(G_i,\mathbb{C}^\times) \simeq G_i \simeq G$. (见 Serge Lang, *Algebra*).
+
+令 $\chi \in \mathrm{Hom}(G,\mathbb{C}^\times)$, 则
+
+$$
+    \sum_{g \in G}\chi(g) = \begin{cases}
+        |G| & \chi = 1 \\
+        0 &  \chi \ne 1\\
+    \end{cases}.
+$$
+
+这是因为 $\chi$ 对应 $G$ 的一个不可约表示.
+
+由 $\mathbb{C}^\times$ 可除, 我们知道 $\mathbb{C}^\times$ 是内射的. 于是 $\mathrm{Hom}(-,\mathbb{C}^\times)$ 正合.
+
 #### Dirichlet Character
 
-设 $2 <r \in \mathbb{Z}$. 我们将同态 $\chi\colon (\mathbb{Z} /r\mathbb{Z})^\times \to \mathbb{C}^\times$ 称为模 $r$ 的 Dirichlet 特征(或者简写特征). 我们可以把 $\chi$ 视为 $\mathbb{Z}$ 的函数, 通过
+设 $2 <r \in \mathbb{Z}$. 我们将同态 $\chi\colon (\mathbb{Z} /r\mathbb{Z})^\times \to \mathbb{C}^\times$ 称为模 $r$ 的 Dirichlet 特征标(或者简写特征标). 我们可以把 $\chi$ 视为 $\mathbb{Z}$ 的函数, 通过
 
 $$
     \chi(c) = \begin{cases}
@@ -88,32 +111,86 @@ $$
     \end{cases}.
 $$
 
-易见对有限 Abel 群 $G$ 有 $\mathrm{Hom}(G,\mathbb{C}^\times) \simeq G$. (见 Lang, *Algebra*.)
 
-我们称模 $r$ 的特征 $\chi$ 是本原的或非平凡的, 若不存在 $s \mid r$ 和模 $s$ 的特征 $\xi$, 使得 $\chi(c) =\xi(c), \forall (c,r)=1$.
+我们称模 $r$ 的特征 $\chi$ 是本原的, 若 $\chi \ne 1$, 且不存在 $r$ 的真因子 $s$ 和模 $s$ 的特征 $\xi$, 使得 $\chi(c) =\xi(c), \forall (c,r)=1$.
 
-令 $\zeta_r = e^{\frac{2\pi i}{r}}$ 是本原 $r$ 次单位根, 称
+设 $s \mid r$, 我们有满同态 $(\mathbb{Z}/r\mathbb{Z})^\times \to (\mathbb{Z}/s\mathbb{Z})^\times , a\pmod{r} \mapsto a\pmod{s}$ (使用中国剩余定理, 先对 $r$ 是素数的幂证明). 其核记为 $H_s = \{a \in (\mathbb{Z}/r\mathbb{Z})^\times \mid a \equiv 1 \pmod{s}\}$. 有正合列
+
+$$
+    1 \to H_s \to (\mathbb{Z}/r\mathbb{Z})^\times \to (\mathbb{Z}/s\mathbb{Z}) \to 1.
+$$
+
+从而
+
+$$
+    1 \to \mathrm{Hom}((\mathbb{Z}/s\mathbb{Z})^\times ,\mathbb{C}^\times) \to \mathrm{Hom}((\mathbb{Z}/r\mathbb{Z})^\times,\mathbb{C}^\times)\to \mathrm{Hom}(H_s,\mathbb{C}^\times) \to 1.
+$$
+
+正合.
+
+{% note %}
+    **Proposition (1).** 设 $\chi$ 是模 $r$ 的特征标, 则 $\chi$ 是本原的当且仅当对任意 $r$ 的因子 $s$, 有 $\chi$ 在 $H_s$ 上的限制不为 $1$.
+{% endnote %}
+
+*proof.* 若 $\chi$ 在某个 $H_s$ 上的限制平凡, 若 $s=r$, 则 $H_s = (\mathbb{Z}/r\mathbb{Z})^\times$, 这导致 $\chi = 1$. 若 $s$ 是真因子, 由正合列, 存在模 $s$ 的特征标 $\chi_1$, 使得 $\chi = \chi_1\pi$. 其中 $\pi\colon (\mathbb{Z}/r\mathbb{Z})^\times \to (\mathbb{Z}/s\mathbb{Z})^\times$. 这导致任意 $(c,r)=1$, 有 $\chi(c) = \chi_1(c)$. 于是 $\chi$ 不本原.
+
+反之, 若 $\chi$ 不本原, $\chi = 1$ 时平凡, 下设 $\chi \ne 1$. 存在 $r$ 的真因子 $s$ 和模 $s$ 的特征标 $\chi_1$ 使得 $\chi(c) = \chi_1(c), \forall (c,r)=1$. 易见 $\chi = \chi_1\pi$. 由正合列, $\chi$ 在 $H_s$ 上的限制平凡. 证完.
+
+{% note %}
+    **Lemma (1).** 设 $s$ 是 $r$ 的真因子, 记 $\zeta_s = e^{\frac{2\pi i}{s}}$ 是本原 $s$ 次单位根, 设 $\chi$ 是模 $r$ 的本原特征标. 则 $\sum_{a \in (\mathbb{Z}/r\mathbb{Z})^\times} \chi(a)\zeta_s^a = 0$.
+{% endnote %}
+
+*proof.* 为简洁记 $G = (\mathbb{Z}/r\mathbb{Z})^r$, $L$ 是左陪集 $G /H_s$ 的一组代表元, 有
+
+$$
+    \sum_{a \in G}\chi(a)\zeta_s^a = \sum_{l \in L}\sum_{a \in H_s}\chi(la)\zeta_s^{la} = \sum_{l\in L}\chi(l)\zeta^l\sum_{a \in H_s}\chi(a).
+$$
+
+而 $\chi$ 限制在 $H_s$ 上给出 $H_s$ 非平凡的一维表示, 导致 $\sum_{a \in H_s}\chi(a) = 0$. 证完.
+
+令 $\zeta_r = e^{\frac{2\pi i}{r}}$ 是本原 $r$ 次单位根, 设 $\chi$ 是模 $r$ 的特征标. 称
 
 $$
     \tau(\chi) = \sum_{a \in \mathbb{Z} /r\mathbb{Z}} \chi(a)\zeta_r^a
 $$
 
-为 $\chi$ 的 Gauss 和. 其求和号可以换为 $\sum_{a=1}^r,\sum_{a=1}^{r-1}$ 或者 $\sum_{a \in (\mathbb{Z} /r\mathbb{Z})^\times}$. 设 $\chi$ 是本原的, 我们有
+为 $\chi$ 的 Gauss 和. 其求和号可以换为 $\sum_{a=1}^r,\sum_{a=1}^{r-1}$ 或者 $\sum_{a \in (\mathbb{Z} /r\mathbb{Z})^\times}$. 设 $\chi$ 是**本原的**, 我们有([1] page 7).
 
 $$
     \begin{aligned}
-        \sum_{a = 1}^{r} \chi(a)\zeta_r^{ab} &= \overline\chi(b)\tau(x), \\
-        \tau(\chi)\tau(\overline\chi) &= \chi(-1)r, \\
-        |\tau(\chi)|^2 &= r, \\
-        \overline{\tau(\chi)} &= \chi(-1)\tau(\overline\chi).
+        &(i) \,\,\,\sum_{a = 1}^{r} \chi(a)\zeta_r^{ab} = \overline\chi(b)\tau(x), \\
+        &(ii) \,\,\,\tau(\chi)\tau(\overline\chi) = \chi(-1)r, \\
+        &(iii) \,\,\,|\tau(\chi)|^2 = r, \\
+        &(iv) \,\,\,\overline{\tau(\chi)} = \chi(-1)\tau(\overline\chi).
     \end{aligned}
 $$
 
-见书 [1] page 7.
+*proof.* (i). 当 $b$ 与 $r$ 互素时显然. 当 $b$ 与 $r$ 不互素时只需说明左边为 $0$. 这就是 Lemma(1).
+
+(ii) 
+
+$$
+    \tau(\chi)\tau(\overline{\chi}) = \sum_{a=1}^r \left(\tau(\chi)\overline\chi(a)\right)\zeta_r^a = \sum_{1 \le a,b\le r}\chi(b)\zeta_r^{ab}\zeta_r^a = \sum_{b=1}^r\chi(b)\sum_{a=1}^r\zeta_r^{ab}\zeta_r^a.
+$$
+
+然而 $\sum_{a = 1}^{r}\zeta_r^{a(b+1)} = \begin{cases}
+    r & b = r-1\\
+    0 & b \ne r-1\\
+\end{cases}$. 于是 $\tau(\chi)\tau(\overline\chi) = \chi(-1)r$.
+
+(iv) 首先 $\chi(-1) = \pm 1$, 故 $\overline\chi(-1)=\chi(-1)$. 有
+
+$$
+    \overline{\tau(\chi)} = \sum_{a=1}^{r} \overline\chi(a)\zeta_r^{-a} = \sum_{a=1}^r \overline\chi(-a)\zeta_r^a = \chi(-1)\tau(\overline{\chi}).
+$$
+
+(iii) 直接由 (iv) 和 (ii) 得到.
 
  {% note %}
     **Theorem 3.4.** 设 $\chi$ 是模 $r$ 的本原特征标, 满足 $\overline{\chi}=\chi$. 则任意和 $r$ 互素的素数 $p$ 有 $\chi(p) = \chi(-1)^{(p-1) /2}\left(\dfrac{r}{p}\right)$.
  {% endnote %}
+
+ *proof.* 见 [1].
 
  特别地, 设 $q$ 是奇素数, 则 $\left(\dfrac{-}{q}\right)$ 是模 $q$ 的本原特征标. 由 Theorem 3.4 得到
 
@@ -139,3 +216,6 @@ $$
     \end{cases}.
  $$
 
+## 参考资料
+
+[1] Goro Shimura, *Arithmetic of Quadratic Forms*, Springer-Verlag, Springer Monographs in Mathematics, 2010.
