@@ -17,8 +17,8 @@ $\newcommand{\bbZ}{\mathbb{Z}}$
     * [Structure of $(\mathbb{Z}/m\mathbb{Z})^{\times}$.](#structure-of-mathbbzmmathbbztimes)
     * [The quadratic reciprocity law](#the-quadratic-reciprocity-law)
         * [The quadratic residue symbol](#the-quadratic-residue-symbol)
-        * [Characters of Abelian groups](#characters-of-abelian-groups)
-        * [Dirichlet Character](#dirichlet-character)
+        * [Characters of finite abelian groups](#characters-of-finite-abelian-groups)
+        * [Dirichlet character](#dirichlet-character)
 * [参考资料](#参考资料)
 
 <!-- vim-markdown-toc -->
@@ -81,7 +81,7 @@ $$
     \left(\dfrac{-1}{p}\right) = (-1)^{\frac{p-1}{2}}.
 $$
 
-#### Characters of Abelian groups
+#### Characters of finite abelian groups
 
 设 $G$ 是有限 Abel 群, 则 $G$ 的所有不可约复表示都是一维的.
 
@@ -100,7 +100,7 @@ $$
 
 由 $\mathbb{C}^\times$ 可除, 我们知道 $\mathbb{C}^\times$ 是内射的. 于是 $\mathrm{Hom}(-,\mathbb{C}^\times)$ 正合.
 
-#### Dirichlet Character
+#### Dirichlet character
 
 设 $2 <r \in \mathbb{Z}$. 我们将同态 $\chi\colon (\mathbb{Z} /r\mathbb{Z})^\times \to \mathbb{C}^\times$ 称为模 $r$ 的 Dirichlet 特征标(或者简写特征标). 我们可以把 $\chi$ 视为 $\mathbb{Z}$ 的函数, 通过
 
@@ -129,10 +129,10 @@ $$
 正合.
 
 {% note %}
-    **Proposition (1).** 设 $\chi$ 是模 $r$ 的特征标, 则 $\chi$ 是本原的当且仅当对任意 $r$ 的因子 $s$, 有 $\chi$ 在 $H_s$ 上的限制不为 $1$.
+    **Proposition (1).** 设 $\chi$ 是模 $r$ 的特征标, 则 $\chi$ 是本原的当且仅当对任意 $r$ 的真因子 $s$ 或 $s=1$, 有 $\chi$ 在 $H_s$ 上的限制不为 $1$.
 {% endnote %}
 
-*proof.* 若 $\chi$ 在某个 $H_s$ 上的限制平凡, 若 $s=r$, 则 $H_s = (\mathbb{Z}/r\mathbb{Z})^\times$, 这导致 $\chi = 1$. 若 $s$ 是真因子, 由正合列, 存在模 $s$ 的特征标 $\chi_1$, 使得 $\chi = \chi_1\pi$. 其中 $\pi\colon (\mathbb{Z}/r\mathbb{Z})^\times \to (\mathbb{Z}/s\mathbb{Z})^\times$. 这导致任意 $(c,r)=1$, 有 $\chi(c) = \chi_1(c)$. 于是 $\chi$ 不本原.
+*proof.* 若 $\chi$ 在某个 $H_s$ 上的限制平凡, 若 $s=1$, 则 $H_s = (\mathbb{Z}/r\mathbb{Z})^\times$, 这导致 $\chi = 1$. 若 $s \ne 1$, 由正合列, 存在模 $s$ 的特征标 $\chi_1$, 使得 $\chi = \chi_1\pi$. 其中 $\pi\colon (\mathbb{Z}/r\mathbb{Z})^\times \to (\mathbb{Z}/s\mathbb{Z})^\times$. 这导致任意 $(c,r)=1$, 有 $\chi(c) = \chi_1(c)$. 于是 $\chi$ 不本原.
 
 反之, 若 $\chi$ 不本原, $\chi = 1$ 时平凡, 下设 $\chi \ne 1$. 存在 $r$ 的真因子 $s$ 和模 $s$ 的特征标 $\chi_1$ 使得 $\chi(c) = \chi_1(c), \forall (c,r)=1$. 易见 $\chi = \chi_1\pi$. 由正合列, $\chi$ 在 $H_s$ 上的限制平凡. 证完.
 
@@ -140,7 +140,7 @@ $$
     **Lemma (1).** 设 $s$ 是 $r$ 的真因子, 记 $\zeta_s = e^{\frac{2\pi i}{s}}$ 是本原 $s$ 次单位根, 设 $\chi$ 是模 $r$ 的本原特征标. 则 $\sum_{a \in (\mathbb{Z}/r\mathbb{Z})^\times} \chi(a)\zeta_s^a = 0$.
 {% endnote %}
 
-*proof.* 为简洁记 $G = (\mathbb{Z}/r\mathbb{Z})^r$, $L$ 是左陪集 $G /H_s$ 的一组代表元, 有
+*proof.* 为简洁记 $G = (\mathbb{Z}/r\mathbb{Z})^\times$, $L$ 是左陪集 $G /H_s$ 的一组代表元, 有
 
 $$
     \sum_{a \in G}\chi(a)\zeta_s^a = \sum_{l \in L}\sum_{a \in H_s}\chi(la)\zeta_s^{la} = \sum_{l\in L}\chi(l)\zeta^l\sum_{a \in H_s}\chi(a).
@@ -187,10 +187,42 @@ $$
 (iii) 直接由 (iv) 和 (ii) 得到.
 
  {% note %}
-    **Theorem 3.4.** 设 $\chi$ 是模 $r$ 的本原特征标, 满足 $\overline{\chi}=\chi$. 则任意和 $r$ 互素的素数 $p$ 有 $\chi(p) = \chi(-1)^{(p-1) /2}\left(\dfrac{r}{p}\right)$.
+    **Theorem 3.4.** 设 $\chi$ 是模 $r$ 的本原特征标, 满足 $\overline{\chi}=\chi$. 则任意和 $r$ 互素的奇素数 $p$ 有 $\chi(p) = \chi(-1)^{(p-1) /2}\left(\dfrac{r}{p}\right)$.
  {% endnote %}
 
- *proof.* 见 [1].
+ *proof.* 记 $\tau = \tau(\chi)$, $\zeta =\zeta_r$. 令 $R= \mathbb{Z}[\zeta]$. 我们有 $\tau \in R$. 有 $\tau^2 = \chi(-1)r$. 于是
+
+ $$
+    \tau^p = (\tau^2)^{\frac{p-1}{2}}\tau = \chi(-1)^{\frac{p-1}{2}}r^{\frac{p-1}{2}}\tau.
+ $$
+
+ 另一方面, 我们有 $(a+b)^p \equiv a^p+b^p \pmod{pR}$, 于是
+
+ $$
+    \tau^p \equiv \sum_{a=1}^{r-1} \chi(a)\zeta^{ap} \equiv \chi(p)\tau \pmod{pR}.
+ $$
+
+从而, 得到
+
+$$
+    \chi(p)\tau \equiv \chi(-1)^{\frac{p-1}{2}}r^{\frac{p-1}{2}}\tau \equiv \chi(-1)^{\frac{p-1}{2}}\left(\dfrac{r}{p}\right)\tau \pmod{pR}.
+$$
+
+我们有$\tau\cdot\overline{\tau} = r$, 故
+
+$$
+    \chi(p)r \equiv \chi(-1)^{\frac{p-1}{2}}\left(\dfrac{r}{p}\right)r \pmod{pR}.
+$$
+
+注意 $pR \cap \mathbb{Z} = p\mathbb{Z}$ 且上式两边都是整数, 我们有
+
+$$
+    \chi(p)r \equiv \chi(-1)^{\frac{p-1}{2}}\left(\dfrac{r}{p}\right)r \pmod {p}.
+$$
+
+结合 $r$ 和 $p$ 互素, 我们得到 $\chi(p) \equiv \chi(-1)^{(p-1) /2}\left(\dfrac{r}{p}\right) \pmod {p}$. 同余式两边取值 $\pm 1$ 而 $p > 2$, 故 $\chi(p) = \chi(-1)^{(p-1) /2}\left(\dfrac{r}{p}\right)$. 证完.
+
+注: $pR \cap \mathbb{Z} = p\mathbb{Z}$ 的原因是: 有 $p\mathbb{Z} \subset pR \cap \mathbb{Z} \subset \mathbb{Z}$, 而 $pR \cap \mathbb{Z}$ 是 $\mathbb{Z}$ 的理想, $p\mathbb{Z}$ 是 $\mathbb{Z}$ 的极大理想, 我们有 $pR\mathbb{Z} \cap \mathbb{Z} = p\mathbb{Z}$ 或 $\mathbb{Z}$. 若 $pR \cap \mathbb{Z} = \mathbb{Z}$ 则 $1 \in pR$, 导致 $1/ p \in R$, 导致 $1 /p$ 是代数整数,矛盾.
 
  特别地, 设 $q$ 是奇素数, 则 $\left(\dfrac{-}{q}\right)$ 是模 $q$ 的本原特征标. 由 Theorem 3.4 得到
 
@@ -215,6 +247,10 @@ $$
         -1 & p \equiv \pm 3 \pmod{8}\\
     \end{cases}.
  $$
+
+ 现在, 设 $\xi$ 是模 $t$ 的非本原的特征标, 存在 $s = 1$ 或 $s \mid \xi$ 使得 $\xi$ 在 $\mathrm{Hom}((\mathbb{Z} /s\mathbb{Z})^\times ,\mathbb{C}^\times ) \to \mathrm{Hom}((\mathbb{Z} /t\mathbb{Z})^\times ,\mathbb{C}^\times)$ 的像中(若 $s = 1$, 令 $\xi$ 是平凡的特征标 $1$). 存在最小的 $s$, 使得 $\xi = \chi\pi$, 其中 $\pi$ 是投射, $\chi$ 是模 $s$ 的特征标, 易见 $\chi$ 是本原的(否则与 $s$ 最小矛盾) 且 $\chi$ 是唯一的 (因为 $0 \to \mathrm{Hom}((\mathbb{Z} /s\mathbb{Z})^\times ,\mathbb{C}^\times ) \to \mathrm{Hom}((\mathbb{Z} /t\mathbb{Z})^\times ,\mathbb{C}^\times)$ 正合). 称 $\chi$ 为与 $\xi$ 相联的本原特征标(the prime character associated with $\xi$). 称 $s$ 为 $\xi$ 的 conductor.
+
+
 
 ## 参考资料
 
