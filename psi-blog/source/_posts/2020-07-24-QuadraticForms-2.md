@@ -8,6 +8,8 @@ tags: Math Number-Theory
 
 ~~抄不动了呜呜呜呜呜~~ 定义略去.
 
+<!--more-->
+
 {% note %}
 **Lemma 6.6.** 设 $F$ 是对非阿基米德赋值 $\varphi$ 完备的域, 则
 
@@ -64,7 +66,7 @@ $$
 设 $p$ 是素数, 对 $p^{n} \frac{a}{b} \in \mathbb{Q}$, $p \nmid a,b$, 令 $v_p(p^na /b) = n$. 则 $v_p$ 是一个 order function. 令 $|x|_p = p^{-v_p(x)}$, 则 $\mathbb{Q}$ 的完备化记为 $\mathbb{Q}_p$, 即 $p$-adic 数域. $\mathbb{Z}_p$ 即 $\{x \in \mathbb{Q}_p \mid v_p(x) \ge 0\}$. 我们有 $\mathbb{Z}_P^\times =\{x \in \mathbb{Z}_p \mid v_p(x) = 0\}$, $\mathbb{Z}$ 在 $\mathbb{Q}_p$ 中的闭包是 $\mathbb{Z}_p$. 于是 Theorem 6.8 告诉我们
 
 $$
-    \mathbb{Z}_p = \{\sum_{k=0}^{\infty}a_kp^k \mid a_k = 0,1,\ldots ,p-1\}.
+    \mathbb{Z}_p = \left\{\sum_{k=0}^{\infty}a_kp^k \mid a_k = 0,1,\ldots ,p-1\right\}.
 $$
 
 下设 $p$ 是**奇素数**. 我们有同态 $\varphi\colon\mathbb{Z}_p \to \mathbb{Z}_p /p\mathbb{Z}_p \to \mathbb{Z}/p\mathbb{Z}$. 设 $x \in \mathbb{Z}_p$, 我们定义$\left(\dfrac{x}{p}\right)=\left(\dfrac{\varphi(x)}{p}\right)$. 这个定义即, 若 $\xi \in \mathbb{Z}$ 使得 $x - \xi \in p\mathbb{Z}_p$, 则 $\left(\dfrac{x}{p}\right)=\left(\dfrac{\xi}{p}\right)$.
