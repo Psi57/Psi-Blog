@@ -321,3 +321,33 @@ $$\begin{aligned}
 在加性范畴中有限直和和直积一样.
 https://math.stackexchange.com/questions/25213/in-an-additive-category-why-is-finite-products-the-same-as-finite-coproducts
 
+
+2020-8-13
+
+令 $p$ 是一个素数, 令 $n = mp^r$ 是正整数, 其中 $p \nmid m$. 在 $\mathbb{F}_p$ 的代数闭包中取本原 $m$ 次单位根(当然存在) $\omega$, 令 $F_n(x) = \prod_{d \in (\mathbb{Z}/n\mathbb{Z})^\times}(x-\omega^d)$. 则 $F(x) \in \mathbb{F}_p[x]$, 且 $F_n(x) \equiv \Phi_n(x) \pmod {p}$, 其中 $\Phi_n(x)$ 是 $n$ 次分圆多项式.
+
+实际上 $F_n(x) = F_m(x)^{\varphi(p^r)}$(同态 $(\mathbb{Z}/n\mathbb{Z})^\times \to (\mathbb{Z}/m\mathbb{Z})^\times$ 满, 其核大小 $\varphi(p^r)$.). 先证明 $n$ 和 $p$ 互素时结论成立, 再利用
+
+{% note %}
+设 $p \nmid m$, 则
+
+$$
+    \Phi_{pm}(x) = \frac{\Phi_n(x^p)}{\Phi_{m}(x)}.
+$$
+
+若 $p \mid m$ 则
+
+$$
+    \Phi_{pn}(x) = \Phi_n(x^p).
+$$
+{% endnote %}
+
+同时利用 $f(x^p) \equiv f(x)^p \pmod {p}$, $f(x) \in \mathbb{Z}[x]$ 即可.
+
+然而当 $n$ 和 $p$ 互素时, $F,\Phi$ 都满足
+
+$$
+    F_n(x) = \frac{x^n-1}{\prod_{d \mid n, d\ne n}F_d(x)},\,\,\,\,\,\Phi_n(x) = \frac{x^n-1}{\prod_{d \mid n,d \ne n}\Phi_d(x)}.
+$$
+
+(用单位根).
