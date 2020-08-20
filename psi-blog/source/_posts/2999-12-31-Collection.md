@@ -351,3 +351,21 @@ $$
 $$
 
 (用单位根).
+
+
+
+2020.8.21
+
+https://math.stackexchange.com/questions/1575646/how-can-we-prove-mathbbq-sqrt-2-sqrt-3-sqrt-n-mathbbq-s/1575702#1575702
+
+https://math.stackexchange.com/questions/113689/proving-that-left-mathbb-q-sqrt-p-1-dots-sqrt-p-n-mathbb-q-right-2n-f
+
+https://math.stackexchange.com/questions/1230173/elementary-proof-for-sqrtp-n1-notin-mathbbq-sqrtp-1-sqrtp-2?noredirect=1
+
+https://mathoverflow.net/questions/131464/relations-between-automorphisms-of-field-of-rational-functions-and-mobius-transf
+
+https://math.stackexchange.com/questions/1842130/galois-group-of-function-field
+
+https://math.stackexchange.com/questions/1654414/why-is-textgalk-k-cong-textgalk-omega-k-omega-with-omega-not?r=SearchResults
+
+
