@@ -373,3 +373,36 @@ https://math.stackexchange.com/questions/1654414/why-is-textgalk-k-cong-textgalk
 设 $k$ 是任意一环, 令 $G$ 是有限群. 则 $R = k[G]$ 半单当且仅当 $k$ 是半单的且 $|G|$ 在 $k$ 中可逆. 见 https://www.isibang.ac.in/~sury/ayushtiwari.pdf Theorem 10.
 
 
+2020.8.23 凌晨.
+
+设 $A$ 为交换环, 令 $\mathfrak{p}_1,\ldots ,\mathfrak{p}_n$ 是 $A$ 的素理想. 则 $S = A -\bigcup_{i=1}^{n} \mathfrak{p}_i$ 是乘性子集. 且 $S^{-1}A_{S^{-1}\mathfrak{p}_i} \simeq A_{\mathfrak{p}_i}$.(都显然.)
+
+现在设 $A$ 是整环. 则 $S^{-1}A = \bigcap_{i=1}^{n}A_{\mathfrak{p}_i}$.(此时, 局部化都在 $A$ 的商域中.) 这是因为:
+
+由 $S^{-1}A_{S^{-1}\mathfrak{p}_i} = A_{\mathfrak{p}_i}$, 有 $\bigcap A_{\mathfrak{p}_i} =\bigcap S^{-1}A_{S^{-1}\mathfrak{p_i}}$. 熟知 $S^{-1}A$ 是其所有素理想处局部化的交, 于是 $S^{-1}A= \bigcap_{\mathfrak{q}} S^{-1}A_{S^{-1}q}$, 其中 $\mathfrak{q}$ 是包含在 $\bigcup_{i=1}^{n}\mathfrak{p}_i$ 的素理想, 熟知此时存在 $i$ 使得 $\mathfrak{q}\subset \mathfrak{p}_i$. 于是 $\bigcap_\mathfrak{q} S^{-1}A_{S^{-1}\mathfrak{q}}=\bigcap_i S^{-1}A_{S^{-1}\mathfrak{p}_i}$. 从而证完.
+
+关于两个熟知的事实:
+
+{% note %}
+设 $A$ 是整环, 则 $A$ 是其所有素理想处局部化的交.
+{% endnote %}
+
+*proof.* 设 $x \in \bigcap_{\mathfrak{q}}A_{\mathfrak{q}}$. 令
+
+$$
+    I=\{y \in A\mid yx \in A\}.
+$$
+
+则显然 $I = A$ 或 $I$ 是 $A$ 的理想. 若 $1 \not\in I$, 则 $I$ 是真理想, 故存在 $A$ 的极大理想 $\mathfrak{m}$ 包含 $I$. 有 $x \in A_{\mathfrak{m}}$, 故存在 $y \in A-\mathfrak{m}$ 使得 $yx \in A$, 导致 $y \in I \subset \mathfrak{m}$, 矛盾.
+
+
+{% note %}
+设 $R$ 是环, 设 $I_i,i=1,2,\ldots ,r$ 和 $J$ 是理想.假设
+
+(1) $J \not\subset I_i$, 任意 $i=1,\ldots ,r$.  
+(2) $I_i$ 中有两个素理想.
+
+则存在 $x \in J$ 使得 $x \not\in I_i,i=1,\ldots ,r$.
+{% endnote %}
+
+见 https://stacks.math.columbia.edu/tag/00DS
