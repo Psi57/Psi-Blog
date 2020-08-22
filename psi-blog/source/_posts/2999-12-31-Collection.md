@@ -400,7 +400,7 @@ $$
 设 $R$ 是环, 设 $I_i,i=1,2,\ldots ,r$ 和 $J$ 是理想.假设
 
 (1) $J \not\subset I_i$, 任意 $i=1,\ldots ,r$.  
-(2) $I_i$ 中有两个素理想.
+(2) $I_i$ 中至多两个不是素理想.
 
 则存在 $x \in J$ 使得 $x \not\in I_i,i=1,\ldots ,r$.
 {% endnote %}
