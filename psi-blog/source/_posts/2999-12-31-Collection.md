@@ -368,4 +368,8 @@ https://math.stackexchange.com/questions/1842130/galois-group-of-function-field
 
 https://math.stackexchange.com/questions/1654414/why-is-textgalk-k-cong-textgalk-omega-k-omega-with-omega-not?r=SearchResults
 
+2020.8.22
+
+设 $k$ 是任意一环, 令 $G$ 是有限群. 则 $R = k[G]$ 半单当且仅当 $k$ 是半单的且 $|G|$ 在 $k$ 中可逆. 见 https://www.isibang.ac.in/~sury/ayushtiwari.pdf Theorem 10.
+
 
