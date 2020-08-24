@@ -406,3 +406,12 @@ $$
 {% endnote %}
 
 见 https://stacks.math.columbia.edu/tag/00DS
+
+
+2020.8.24
+
+https://math.stackexchange.com/questions/1292619/suppose-a2bba2-2aba-prove-that-there-exists-a-positive-integer-k-such-tha?noredirect=1
+
+https://math.stackexchange.com/questions/227984/if-a-and-ab-ba-commute-show-that-ab-ba-is-nilpotent?noredirect=1
+
+https://math.stackexchange.com/questions/3177989/if-nilpotent-matrix-a-and-ab%e2%88%92ba-commute-show-that-ab-is-nilpotent?noredirect=1
