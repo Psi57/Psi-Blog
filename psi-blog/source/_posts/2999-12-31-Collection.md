@@ -415,3 +415,7 @@ https://math.stackexchange.com/questions/1292619/suppose-a2bba2-2aba-prove-that-
 https://math.stackexchange.com/questions/227984/if-a-and-ab-ba-commute-show-that-ab-ba-is-nilpotent?noredirect=1
 
 https://math.stackexchange.com/questions/3177989/if-nilpotent-matrix-a-and-ab%e2%88%92ba-commute-show-that-ab-is-nilpotent?noredirect=1
+
+2002.8.26
+
+https://math.stackexchange.com/questions/1714328/each-minimal-normal-subgroup-of-is-contained-in-the-center
