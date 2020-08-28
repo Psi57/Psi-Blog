@@ -416,6 +416,50 @@ https://math.stackexchange.com/questions/227984/if-a-and-ab-ba-commute-show-that
 
 https://math.stackexchange.com/questions/3177989/if-nilpotent-matrix-a-and-ab%e2%88%92ba-commute-show-that-ab-is-nilpotent?noredirect=1
 
-2002.8.26
+2020.8.26
 
 https://math.stackexchange.com/questions/1714328/each-minimal-normal-subgroup-of-is-contained-in-the-center
+
+
+2020.8.29
+
+{% note %}
+设$\mathfrak{m}$是交换环$R$的极大理想, 设 $M$ 是 $R$-模. 记 $S=R-\mathfrak{m}$.
+
+(i) 若 $s \in S, n > 0$. 证明存在 $s_1\in R$ 使得 $s_1s \equiv 1 \pmod{\mathfrak{m}^n}$.  
+(ii) 定义 $R_\mathfrak{m}R \times  M /\mathfrak{m}^nM$, $(a /s,\overline{m})\mapsto \overline{as_1m}$, 其中 $s_1$ 如 (i). 证明这个映射是良定义的(不依赖 $s_1$), 并且使 $M /\mathfrak{m}^nM$ 成为 $R_{\mathfrak{m}}$ 模.  
+(iii) 令 $\hat{\mathfrak{m}}$ 为 $\mathfrak{m}R_{\mathfrak{m}}$. 证明有 $R_\mathfrak{m}$ 模同构 $M/\mathfrak{m}^nM \simeq M_{\mathfrak{m}} /\hat{m}^nM_{\mathfrak{m}}$.
+{% endnote %}
+
+*proof.* (i) $n=1$ 由 $R /\mathfrak{m}$ 是域得知. 下设 $n \ge 2$, 由归纳, 存在 $s_2 \in R$ 使得
+
+$$
+    ss_2 \equiv 1 \pmod{\mathfrak{m}^{n-1}}.
+$$
+
+从而 $(ss_2-1)^2 \in \mathfrak{m}^{2n-2} \subset \mathfrak{m}^n$. 于是令 $s_1 = (2s_2-ss_2^2)$ 即可.
+
+(ii) 略
+
+(iii)
+
+$$
+    S^{-1}M /S^{-1}\mathfrak{m}^nM\simeq S^{-1}(M /\mathfrak{m}^{n} M) \simeq S^{-1}R \otimes_{R} M /\mathfrak{m}^nM.
+$$
+
+作互逆的$R_{\mathfrak{m}}$模同态
+
+$$
+    \begin{aligned}
+        S^{-1}R \otimes_{R} M /\mathfrak{m}^nM \to M /m^{n}M ,(a /s,\overline{m}) \mapsto \overline{as_1m}, \\
+        M /m^{n}M \to S^{-1}R \otimes_{R} M /\mathfrak{m}^nM, a \mapsto 1\otimes a.
+    \end{aligned}
+$$
+
+即可.
+
+{% note %}
+设 $R$ 是整环, 设 $K$ 为 $R$ 商域. 证明 $b \in aR$ 等价于 $b \in aR_{\mathfrak{p}}$, 任意 $R$ 的素理想 $\mathfrak{p}$ 等价于 $b \in aR_{\mathfrak{m}}$, 任意 $R$ 的极大理想 $\mathfrak{m}$.
+{% endnote %}
+
+*proof.* 只证明 $3$ 推 $1$. 令 $I = \{x \in R \mid xb \in aR\}$. 则 $I$ 是 $R$ 的理想. 若 $1 \not\in I$ 取 $\mathfrak{m}$ 是一个包含 $I$ 的极大理想. 由条件存在 $s \in R-\mathfrak{m}$ 使得 $bs \in aR$. 导致 $s \in I \subset \mathfrak{m}$ 矛盾.
