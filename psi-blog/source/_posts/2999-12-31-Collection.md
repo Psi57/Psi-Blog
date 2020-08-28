@@ -459,7 +459,7 @@ $$
 即可.
 
 {% note %}
-设 $R$ 是整环, 设 $K$ 为 $R$ 商域. 证明 $b \in aR$ 等价于 $b \in aR_{\mathfrak{p}}$, 任意 $R$ 的素理想 $\mathfrak{p}$ 等价于 $b \in aR_{\mathfrak{m}}$, 任意 $R$ 的极大理想 $\mathfrak{m}$.
+设 $R$ 是整环, 设 $K$ 为 $R$ 商域. 设 $a,b\in R$, $ab \ne 0$. 证明 $b \in aR$ 等价于 $b \in aR_{\mathfrak{p}}$, 任意 $R$ 的素理想 $\mathfrak{p}$ 等价于 $b \in aR_{\mathfrak{m}}$, 任意 $R$ 的极大理想 $\mathfrak{m}$.
 {% endnote %}
 
 *proof.* 只证明 $3$ 推 $1$. 令 $I = \{x \in R \mid xb \in aR\}$. 则 $I$ 是 $R$ 的理想. 若 $1 \not\in I$ 取 $\mathfrak{m}$ 是一个包含 $I$ 的极大理想. 由条件存在 $s \in R-\mathfrak{m}$ 使得 $bs \in aR$. 导致 $s \in I \subset \mathfrak{m}$ 矛盾.
