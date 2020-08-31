@@ -463,3 +463,48 @@ $$
 {% endnote %}
 
 *proof.* 只证明 $3$ 推 $1$. 令 $I = \{x \in R \mid xb \in aR\}$. 则 $I$ 是 $R$ 的理想. 若 $1 \not\in I$ 取 $\mathfrak{m}$ 是一个包含 $I$ 的极大理想. 由条件存在 $s \in R-\mathfrak{m}$ 使得 $bs \in aR$. 导致 $s \in I \subset \mathfrak{m}$ 矛盾.
+
+
+2020.9.1
+
+设 $M$ 是 Abel 群. 考虑 $M^* = \mathrm{Hom}(M,\mathbb{Q} /\mathbb{Z})$, $M^{* *}=\mathrm{Hom}(M^*,\mathbb{Q} /\mathbb{Z})$, 考虑
+
+$$
+\theta_M\colon M \mapsto M^{* *}, \theta_M(x)(f) = f(x).
+$$
+
+则 $\theta_M$ 是单射.
+
+任意 $0 \ne x \in M$, 有 $0 \to \langle x\rangle \to M$ 正合. 那么只需证明存在非零的同态 $g\colon \langle x\rangle \to\mathbb{Q} /\mathbb{Z}$, 利用 $\mathbb{Q} /\mathbb{Z}$ 是内射的, 就得到 $g$ 延拓到 $M$, 使得 $g(x) \ne 0$. 于是 $x \not\in \ker\theta_M$.
+
+若 $x$ 是有限阶的元素, 设 $o(x)= n$, 将 $x$ 映射到 $1 /n\pmod{\mathbb{Z}}$ 即可.
+
+若 $x$ 是无限阶的元素, 则 $\langle x\rangle = \mathbb{Z}$ 自由, 从而命题成立.
+
+于是 $M^{*} = 0 \Rightarrow M = 0$.
+
+{% note %}
+设 $R$ 是环, $M$ 是(左)$R$-模. 则 $M$ 是平坦$R$-模当且仅当$\mathrm{Hom}(M,\mathbb{Q} /\mathbb{Z})$ 是内射$R$-模.
+{% endnote %}
+
+*proof.* 利用 $\mathrm{Hom}_\mathbb{Z}(-\otimes_R M,\mathbb{Q} /\mathbb{Z}) = \mathrm{Hom}_R(-,\mathrm{Hom}_\mathbb{Z}(M,\mathbb{Q} /\mathbb{Z}))$, 我们得到 $\Rightarrow$ 成立. 反过来, 设 $f\colon A \to B$ 是单射.记 $T = -\otimes_R M$, $T' = \mathrm{Hom}_R(-,\mathrm{Hom}_\mathbb{Z}(M,\mathbb{Q}/\mathbb{Z}))$, 我们有
+
+$$
+    T'(B) \xrightarrow{T'(f)} T'(A) \to 0
+$$
+
+正合, 从而 $\mathrm{Hom}_\mathbb{Z}(T(B),\mathbb{Q} /\mathbb{Z}) \to \mathrm{Hom}_\mathbb{Z}(T(A),\mathbb{Q} /\mathbb{Z})$ 是满射. 我们设
+
+$$
+    0 \to K \to T(A) \xrightarrow{f\otimes 1} T(B)
+$$
+
+正合, 则
+
+$$
+    \mathrm{Hom}_\mathbb{Z}(T(B),\mathbb{Q} /\mathbb{Z}) \to \mathrm{Hom}_\mathbb{Z}(T(A), \mathbb{Q} /\mathbb{Z}) \to \mathrm{Hom}_\mathbb{Z}(K, \mathbb{Q} /\mathbb{Z}) \to 0
+$$
+
+正合. 这导致 $\mathbb{Hom}_\mathbb{Z}(K, \mathbb{Q} /\mathbb{Z}) = 0$, 导致 $K=0$. 这说明 $f \otimes 1$ 是单射从而 $M$ 是平坦模.
+
+https://math.stackexchange.com/questions/2055135/m-is-a-flat-r-module-if-and-only-if-its-character-module-i-e-hom-mathb?noredirect=1
