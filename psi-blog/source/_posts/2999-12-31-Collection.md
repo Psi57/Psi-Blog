@@ -470,7 +470,7 @@ $$
 设 $M$ 是 Abel 群. 考虑 $M^* = \mathrm{Hom}(M,\mathbb{Q} /\mathbb{Z})$, $M^{* *}=\mathrm{Hom}(M^*,\mathbb{Q} /\mathbb{Z})$, 考虑
 
 $$
-\theta_M\colon M \mapsto M^{* *}, \theta_M(x)(f) = f(x).
+\theta_M\colon M \to M^{* *}, \theta_M(x)(f) = f(x).
 $$
 
 则 $\theta_M$ 是单射.
